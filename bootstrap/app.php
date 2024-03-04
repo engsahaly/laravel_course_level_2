@@ -52,4 +52,6 @@ $app->singleton(
 |
 */
 
+// dump('stage 2');
+
 return $app;

@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\Facades\Broadcast;
 use Illuminate\Support\ServiceProvider;
 
+// dump('stage 7');
+
 class BroadcastServiceProvider extends ServiceProvider
 {
     /**
