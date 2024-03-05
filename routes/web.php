@@ -18,7 +18,12 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name('mahmoud route');
+// Route::get('/', HomeController::class)->middleware(['throttle:watch_limiter'])->name('mahmoud route');
+
+Route::get('/users/{id}', HomeController::class);
+Route::get('/suppliers/{id}', HomeController::class);
+Route::get('/products/{id}', HomeController::class);
 
 
 Route::prefix('dashboard')->group(function () {
@@ -31,6 +36,10 @@ Route::prefix('dashboard')->group(function () {
 });
 
 
+Route::fallback(function () {
+    return to_route('mahmoud route');
+});
+
 
 // Route::middleware('auth')->group(function () {
 //     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -39,3 +48,6 @@ Route::prefix('dashboard')->group(function () {
 // });
 
 // require __DIR__.'/auth.php';
+
+// require __DIR__ . '/admin.php';
+// require __DIR__ . '/merchant.php';
