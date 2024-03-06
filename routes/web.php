@@ -21,9 +21,9 @@ use App\Http\Controllers\ProfileController;
 Route::get('/', HomeController::class)->name('mahmoud route');
 // Route::get('/', HomeController::class)->middleware(['throttle:watch_limiter'])->name('mahmoud route');
 
-Route::get('/users/{id}', HomeController::class);
-Route::get('/suppliers/{id}', HomeController::class);
-Route::get('/products/{id}', HomeController::class);
+// Route::get('/users/{id}', HomeController::class);
+// Route::get('/suppliers/{id}', HomeController::class);
+// Route::get('/products/{id}', HomeController::class);
 
 
 Route::prefix('dashboard')->group(function () {
@@ -32,7 +32,10 @@ Route::prefix('dashboard')->group(function () {
     Route::view('/', 'dashboard')->name('dashboard');
 
     // ============================================= products
-    Route::resource('products', ProductController::class);
+    // Route::get('products/show/{product:slug}', [ProductController::class, 'show'])->name('products.show');
+    // Route::resource('products', ProductController::class)->except('show')->parameters(['products' => 'product:slug']);
+    Route::get('products/show/{product}', [ProductController::class, 'show'])->name('products.show');
+    Route::resource('products', ProductController::class)->except('show');
 });
 
 
