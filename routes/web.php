@@ -29,7 +29,8 @@ Route::get('/', HomeController::class)->name('mahmoud route');
 Route::prefix('dashboard')->group(function () {
 
     // ==================================== dashboard main page
-    Route::view('/', 'dashboard')->name('dashboard');
+    // Route::view('/', 'dashboard')->name('dashboard')->withoutMiddleware('auth');
+    Route::view('/', 'dashboard')->middleware('test:mahmoud,ahmed,yassr')->name('dashboard');
 
     // ============================================= products
     // Route::get('products/show/{product:slug}', [ProductController::class, 'show'])->name('products.show');
@@ -50,7 +51,7 @@ Route::fallback(function () {
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
 
-// require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 // require __DIR__ . '/admin.php';
 // require __DIR__ . '/merchant.php';
