@@ -27,7 +27,7 @@ Route::get('/', HomeController::class)->name('mahmoud route');
 // Route::get('/products/{id}', HomeController::class);
 
 
-Route::prefix('dashboard')->middleware('auth')->group(function () {
+Route::prefix('dashboard')->group(function () {
 
     // ==================================== dashboard main page
     // Route::view('/', 'dashboard')->name('dashboard')->withoutMiddleware('auth');
