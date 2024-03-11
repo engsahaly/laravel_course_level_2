@@ -19,7 +19,7 @@ use App\Models\Product;
 |
 */
 
-Route::get('/hello', HomeController::class)->name('mahmoud route');
+Route::get('/', HomeController::class)->name('mahmoud route');
 // Route::get('/', HomeController::class)->middleware(['throttle:watch_limiter'])->name('mahmoud route');
 
 // Route::get('/users/{id}', HomeController::class);

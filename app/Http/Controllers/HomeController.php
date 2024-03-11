@@ -69,6 +69,6 @@ class HomeController extends Controller
         //     dd('name exists');
         // });
 
-        // return view('welcome');
+        return view('welcome');
     }
 }
