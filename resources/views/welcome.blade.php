@@ -837,9 +837,9 @@
     {{-- @dump($settings)
     @dump($myName) --}}
 
-    <x-button-component name="mahmoud"></x-button-component>
+    {{-- <x-button-component name="mahmoud"></x-button-component>
 
-    <x-button-component2></x-button-component2>
+    <x-button-component2></x-button-component2> --}}
 
 
     <div
