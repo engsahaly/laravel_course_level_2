@@ -5,8 +5,10 @@
         </h2>
     </x-slot>
 
-    @dump($settings)
-    @dump($myName)
+    {{-- @dump($settings)
+    @dump($myName) --}}
+
+    <x-button-component name="Ahmed"></x-button-component>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
