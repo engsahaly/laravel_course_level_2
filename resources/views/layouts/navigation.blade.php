@@ -21,6 +21,25 @@
                         {{ __('Products') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    @php
+                        $language = request()->segment(1) == 'ar' ? 'en' : 'ar';
+                    @endphp
+                    <x-nav-link href="{{ LaravelLocalization::getLocalizedURL($language) }}">
+                        {{ strtoupper($language) }}
+                        {{-- {{ request()->segment(1) == 'ar' ? 'EN' : 'AR' }} --}}
+                    </x-nav-link>
+                </div>
+                {{-- <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    @php
+                        $route = Illuminate\Support\Facades\Route::currentRouteName();
+                        $language = request()->segment(1) == 'ar' ? 'en' : 'ar';
+                    @endphp
+                    <x-nav-link href="{{ route($route, ['locale' => $language]) }}">
+                        {{ strtoupper($language) }} --}}
+                {{-- {{ request()->segment(1) == 'ar' ? 'EN' : 'AR' }} --}}
+                {{-- </x-nav-link>
+                </div> --}}
             </div>
 
         </div>

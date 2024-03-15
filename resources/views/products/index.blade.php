@@ -47,7 +47,7 @@
                                                     $slug = Illuminate\Support\Str::slug($product->name, '-');
                                                 @endphp --}}
                                                 <a href="{{ route('products.show', $product) }}"
-                                                    class="btn btn-warning me-2">Show</a>
+                                                    class="btn btn-warning me-2">{{ __('keywords.show') }}</a>
                                                 <a href="{{ route('products.edit', $product) }}"
                                                     class="btn btn-primary me-2">Edit</a>
                                                 <form action="{{ route('products.destroy', $product) }}" method="POST">
