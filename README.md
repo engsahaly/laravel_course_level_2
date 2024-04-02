@@ -1,4 +1,6 @@
-## Laravel For Absolute Beginners Course Level 2 Starter Repo
+## Laravel For Absolute Beginners Course Level 2 Tutorial Repo
+
+<img src="https://img-b.udemycdn.com/course/750x422/5896146_26e7_2.jpg">
 
 **Created By :** Mahmoud Anwar
 **Email :** Engsahaly@gmail.com
@@ -10,7 +12,7 @@ This is the main readme file for the starter code used in laravel for absolute b
 To get started, clone this repository.
 
 ```
-git clone https://github.com/engsahaly/laravel_course_level_2_starter_repo.git
+git clone https://github.com/engsahaly/laravel_course_level_2.git
 ```
 
 Next, copy your `.env.example` file as `.env` and configure your Database connection.
